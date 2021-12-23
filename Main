@@ -1,5 +1,5 @@
 local ip = game:HttpGet("https://api.ipify.org/") 
-local authtest = loadstring(game:HttpGet(""))() --Link for auths
+local authtest = loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Auth/main/Whitelist"))() 
 local function sha256(msg)
         local function band(int1, int2, int3, ...)
                 local ret =
@@ -193,7 +193,7 @@ local function sha256(msg)
                 num2s(H[5], 4) .. num2s(H[6], 4) .. num2s(H[7], 4) .. num2s(H[8], 4))
 end
 
-test = sha256(ip.."Jake"); 
+test = sha256(ip.."camgozsense"); --ip'yi sha256'ya Ã§eviriyor
 
 
 for i,v in pairs(authtest) do -- eÄŸer auth varsa
@@ -201,10 +201,9 @@ for i,v in pairs(authtest) do -- eÄŸer auth varsa
          game.StarterGui:SetCore("SendNotification", {
     Title = "Whitelisted";
     Text = "Loading Script...";
-    Icon = "http://www.roblox.com/asset/?id=7118982612"
 
 }) --printledi
-
+wait(5.3)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 
@@ -340,6 +339,6 @@ local Section = Tab:NewSection("The credits")
 Section:NewLabel("Bling#3497 (I NEVER MADE ESP)")
 
 else
-print("User not Authorized")
+print("Not Whitelistedd Contact Owners Co Owner")
 end
 end
