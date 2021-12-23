@@ -1,3 +1,5 @@
+local plr = game:GetService("Players").LocalPlayer
+if plr:IsInGroup("3925768") then
 
 if game.PlaceId ~= 2788229376 then game.StarterGui:SetCore("SendNotification", {
 	Title = "Dult.PX";
@@ -146,3 +148,12 @@ local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("The credits")
 
 Section:NewLabel("Bling#3497 (I NEVER MADE ESP)")
+  else
+       game.StarterGui:SetCore("SendNotification", {
+    Title = "Dult.PX";
+    Text = "Thank you for buying Dult.PX, You're whitelisted.";
+    Duration = "4";
+})
+
+
+end
