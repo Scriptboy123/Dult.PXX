@@ -24,7 +24,7 @@ local Section = Tab:NewSection("Aimlock")
 Section:NewButton("Aimlock", "Bling is so hot", function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Aimlock/main/Source", true))()
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
-        Text = "Scuessfully loaded Aimlock.";
+        Text = "Sucessfully loaded Aimlock.";
         Duration = "6";
     })
     
