@@ -1,0 +1,148 @@
+
+if game.PlaceId ~= 2788229376 then game.StarterGui:SetCore("SendNotification", {
+	Title = "Dult.PX";
+	Text = "This script is not supported for this game.";
+	Duration = 6;
+	})
+
+	wait(3) return end
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Dult.PX";
+	Text = "Welcome to Dult.PX";
+	Duration = 6;
+	})
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
+
+local Tab = Window:NewTab("Rage Cheats")
+
+local Section = Tab:NewSection("Aimlock")
+Section:NewButton("Aimlock", "Bling is so hot", function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Aimlock/main/Source", true))()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Dult.PX";
+        Text = "Scuessfully loaded Aimlock.";
+        Duration = "6";
+    })
+    
+    
+end)
+Section:NewKeybind("Aimlock FarRangeKeybind", "Aimlock KeyBind", Enum.KeyCode.Q, function()
+       getgenv().Ifchangekeybind = "Q"
+   getgenv().Keybind = true
+end)
+
+Section:NewKeybind("Aimlock CloseRangeKeybind", "Aimlock KeyBind", Enum.KeyCode.Z, function()
+       getgenv().Ifchangekeybind = "Z"
+   getgenv().Keybind = true
+end)
+Section:NewSlider("Prediction", "Bling is hot wyd eat my grape", 300, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    getgenv().Prediction = true
+    getgenv().SliderInfo = false
+       getgenv().Prediction = "<0-350+>"
+       getgenv().Numbers = true
+      getgenv().Bling = true
+end)
+
+Section:NewButton("AutoPrediction", "Bling2CoolForSchool", function()
+     getgenv().AutoPrediction = true
+     getgenv().Ping = true
+     getgenv().Aimlock = true
+-- Ping<
+         --  30-70
+                   -- = 0.154
+   
+         --  70-100
+                   -- = 0.161
+
+       --   100-150   = 0.167
+ 
+        --  150-200   = 0.188
+
+         -- 200-250   = 0.195
+ 
+         -- 250-320   = 0.212
+                                -->
+end)
+
+local Section = Tab:NewSection("Settings")
+
+Section:NewKeybind("GUI Toggle", "To close and open GUI", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI(ez)
+end)
+
+local Tab = Window:NewTab("Features")
+local Section = Tab:NewSection("Features")
+Section:NewButton("Korblox", "Korblox", function()
+    
+local Char = game.Players.LocalPlayer.Character
+local plr = game.Players.LocalPlayer.Character
+local head = Char.Head
+local face = head.face
+local c = plr.RightFoot
+local x = plr.RightLowerLeg
+local z = plr.RightUpperLeg
+local r = plr.LeftFoot
+local e = plr.LeftLowerLeg
+local w = plr.LeftUpperLeg
+
+
+
+-- Right
+c.MeshId = "http://www.roblox.com/asset/?id=902942093"
+x.MeshId = "http://www.roblox.com/asset/?id=902942093"
+z.MeshId = "http://www.roblox.com/asset/?id=902942096"
+z.TextureID = "http://roblox.com/asset/?id=902843398"
+c.Transparency = 1
+x.Transparency = 1
+end)
+Section:NewButton("AntiSnow", "Barely any snow left", function()
+    game:GetService("Workspace").Ignored.SnowBlock:Destroy()
+end)
+
+Section:NewButton("FakeMacro (K)", "FakeMacro (k) to speed", function()
+    -- the key 2 speed is "K"
+plr = game:GetService('Players').LocalPlayer
+down = true
+ 
+function onButton1Down(mouse)
+    down = true
+    while down do
+        if not down then break end
+        local char = plr.Character
+        char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 190
+        wait()
+    end
+end
+ 
+function onButton1Up(mouse)
+    down = false
+end
+ 
+function onSelected(mouse)
+    mouse.KeyDown:connect(function(k) if k:lower()=="k"then onButton1Down(mouse)end end)
+    mouse.KeyUp:connect(function(k) if k:lower()=="k"then onButton1Up(mouse)end end)
+end
+onSelected(game.Players.LocalPlayer:GetMouse())
+end)                                                                                                                                                
+
+local Tab = Window:NewTab("ESP")
+
+local Section = Tab:NewSection("ESP")
+                                                                                                                                                Section:NewToggle("ESP", "To see everyone in the server", function(state)
+    if state then
+        local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+    ESP:Toggle(true)
+    else
+        ESP:UnToggle(false)
+    end
+end)
+local Section = Tab:NewSection("WARNING")
+
+Section:NewLabel("ESP CAN BE LAGGY (Also bugged for now)")
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("The credits")
+
+Section:NewLabel("Bling#3497 (I NEVER MADE ESP)")
