@@ -219,15 +219,6 @@ Section:NewButton("SilentAim", "Bling is so hot", function(bling2cool)        lo
     
     
 end)
-Section:NewKeybind("SilentAim FarRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Q, function()
-       getgenv().Ifchangekeybind = "E"
-   getgenv().Keybind = true
-end)
-
-Section:NewKeybind("Aimlock CloseRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Z, function()
-       getgenv().Ifchangekeybind = "E"
-   getgenv().Keybind = true
-end)
 Section:NewSlider("Prediction", "Bling is hot wyd eat my grape", 300, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     getgenv().Prediction = true
     getgenv().SliderInfo = false
