@@ -433,6 +433,7 @@ local Section = Tab:NewSection("ESP")
     end
 end)
 local Section = Tab:NewSection("WARNING")
+Section:NewLabel("ESP CAN BE LAGGY (Also bugged for now)")
 
 local Tab = Window:NewTab("Animation Changer")
 local Section = Tab:NewSection("Animation Changer")
@@ -451,8 +452,8 @@ game.Players.LocalPlayer.Character.Humanoid.Jump = false
 wait(1)
 end
 end)
+Section:NewLabel("MORE COMING SOON!!!!!!!!")
 
-Section:NewLabel("ESP CAN BE LAGGY (Also bugged for now)")
 
 local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("The credits")
