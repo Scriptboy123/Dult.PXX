@@ -219,13 +219,13 @@ Section:NewButton("SilentAim", "Bling is so hot", function(bling2cool)          
     
     
 end)
-Section:NewSlider("Prediction", "Bling is hot wyd eat my grape", 300, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    getgenv().Prediction = true
-    getgenv().SliderInfo = false
-       getgenv().Prediction = "<0-350+>"
-       getgenv().Numbers = true
-      getgenv().Bling = true
+Section:NewTextBox("Prediction", "Movement of the player", function(Dult.PX)
+	getgenv().FindMovment = ""
+         getgenv().Prediction = true
+         getgenv().Player = true
+         getgenv().Ping = false
 end)
+
 
 Section:NewButton("Smoothness", "Bling2CoolForSchool", function()
      getgenv().Smoothness = true
