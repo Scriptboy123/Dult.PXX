@@ -211,7 +211,8 @@ local Tab = Window:NewTab("Rage Cheats")
 
 local Section = Tab:NewSection("SilentAim")
 Section:NewButton("SilentAim", "Bling is so hot", function(bling2cool)        loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Silentaimm/main/Source ", true))()                  
-    game.StarterGui:SetCore("SendNotification", {
+    game.StarterGui:SetCore("SendNotification", {                                  getgenv().AirShotFunction = true
+                                                                           getgenv().FindTarget = true
         Title = "Dult.PX";
         Text = "Sucessfully loaded SilentAim.";
         Duration = "6";
