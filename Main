@@ -220,7 +220,7 @@ Section:NewButton("SilentAim", "Bling is so hot", function(bling2cool)          
     
 end)
 Section:NewTextBox("Prediction", "Movement of the player", function(Dult.PX)
-	getgenv().FindMovment = ""
+	getgenv().FindMovment = "Players"
          getgenv().Prediction = true
          getgenv().Player = true
          getgenv().Ping = true
