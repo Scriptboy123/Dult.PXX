@@ -291,8 +291,8 @@ Section:NewButton("AntiSnow", "Barely any snow left", function()
 end)
 Section:NewButton("Autofarm", "gets all the money out the atms", function()
     --[[
-Da Hood auto rob script by Amnesia
-I know script became a bit monkey code but i am lazy to make it look better
+Da Hood auto rob script by bling
+I know script became a bit banana code but i am lazy to make it look better
 I didn't obfuscate it because why not
 ]]
 repeat
@@ -342,7 +342,7 @@ for i, v in pairs(workspace:GetDescendants()) do
     end
 end
 
-print("Amnesia's Da Hood Farm")
+print("Auto farm)
 
 shared.MoneyFarm = true -- Just execute shared.MoneyFarm = false to stop farming
 
@@ -381,17 +381,11 @@ while shared.MoneyFarm do
     wait(1)
 end
 end)
-
-Section:NewButton("Silent Aimlock", "op box follows the target", function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/SilentAimlock/main/Source", true))()
-       game.StarterGui:SetCore("SendNotification", {
-        Title = "Dult.PX";
-        Text = "Sucessfully loaded SilentAimlock...";
-        Duration = "6";
-    })
-    
-    
+Section:NewTextBox("Field Of View", "Change your view", function(Dult.PX)
+      function(value)
+		workspace.CurrentCamera.FieldOfView = (value)	
 end)
+
 
 Section:NewButton("FakeMacro (K)", "FakeMacro (k) to speed", function()
     -- the key 2 speed is "K"
