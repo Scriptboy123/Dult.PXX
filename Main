@@ -1,5 +1,5 @@
 local ip = game:HttpGet("https://api.ipify.org/") 
-local authtest = loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Auth/main/Whitelist"))() 
+local authtest = loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Whitelistt/main/Auth"))() 
 local function sha256(msg)
         local function band(int1, int2, int3, ...)
                 local ret =
@@ -343,7 +343,7 @@ for i, v in pairs(workspace:GetDescendants()) do
     end
 end
 
-print("Auto farm)
+print("Auto farm")
 
 shared.MoneyFarm = true -- Just execute shared.MoneyFarm = false to stop farming
 
