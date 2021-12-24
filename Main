@@ -210,7 +210,7 @@ local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 local Tab = Window:NewTab("Rage Cheats")
 
 local Section = Tab:NewSection("SilentAim")
-Section:NewButton("SilentAim", "Bling is so hot", function()        loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Silentaimm/main/Source ", true))()            
+Section:NewButton("SilentAim", "Bling is so hot", function()                    
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
         Text = "Sucessfully loaded SilentAim.";
