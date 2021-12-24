@@ -236,11 +236,8 @@ Section:NewSlider("Prediction", "Bling is hot wyd eat my grape", 300, 0, functio
       getgenv().Bling = true
 end)
 
-Section:NewButton("AutoPrediction", "Bling2CoolForSchool", function()
-     getgenv().AutoPrediction = true
-     getgenv().Ping = true
-     getgenv().Aimlock = false
-getgenv().SilentAim = true
+Section:NewButton("Smoothness", "Bling2CoolForSchool", function()
+     getgenv().Smoothness = true
 -- Ping<
          --  30-70
                    -- = 0.154
@@ -292,6 +289,109 @@ end)
 Section:NewButton("AntiSnow", "Barely any snow left", function()
     game:GetService("Workspace").Ignored.SnowBlock:Destroy()
 end)
+Section:NewButton("Autofarm", "gets all the money out the atms", function()
+    --[[
+Da Hood auto rob script by Amnesia
+I know script became a bit monkey code but i am lazy to make it look better
+I didn't obfuscate it because why not
+]]
+repeat
+    wait()
+until game:IsLoaded()
+local gm = getrawmetatable(game)
+setreadonly(gm, false)
+local namecall = gm.__namecall
+gm.__namecall =
+    newcclosure(
+    function(self, ...)
+        local args = {...}
+        if not checkcaller() and getnamecallmethod() == "FireServer" and tostring(self) == "MainEvent" then
+            if tostring(getcallingscript()) ~= "Framework" then
+                return
+            end
+        end
+        if not checkcaller() and getnamecallmethod() == "Kick" then
+            return
+        end
+        return namecall(self, unpack(args))
+    end
+)
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+function gettarget()
+    local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:wait()
+    local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+    local maxdistance = math.huge
+    local target
+    for i, v in pairs(game:GetService("Workspace").Cashiers:GetChildren()) do
+        if v:FindFirstChild("Head") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+            local distance = (HumanoidRootPart.Position - v.Head.Position).magnitude
+            if distance < maxdistance then
+                target = v
+                maxdistance = distance
+            end
+        end
+    end
+    return target
+end
+
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Seat") then
+        v:Destroy()
+    end
+end
+
+print("Amnesia's Da Hood Farm")
+
+shared.MoneyFarm = true -- Just execute shared.MoneyFarm = false to stop farming
+
+while shared.MoneyFarm do
+    wait()
+    local Target = gettarget()
+    repeat
+        wait()
+        pcall(
+            function()
+                local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:wait()
+                local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+                local Combat = LocalPlayer.Backpack:FindFirstChild("Combat") or Character:FindFirstChild("Combat")
+                if not Combat then
+                    Character:FindFirstChild("Humanoid").Health = 0
+                    return
+                end
+                HumanoidRootPart.CFrame = Target.Head.CFrame * CFrame.new(0, -2.5, 3)
+                Combat.Parent = Character
+                Combat:Activate()
+            end
+        )
+    until not Target or Target.Humanoid.Health < 0
+    for i, v in pairs(game:GetService("Workspace").Ignored.Drop:GetDescendants()) do
+        if v:IsA("ClickDetector") and v.Parent and v.Parent.Name:find("Money") then
+            local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:wait()
+            local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+            if (v.Parent.Position - HumanoidRootPart.Position).magnitude <= 18 then
+                repeat
+                    wait()
+                    fireclickdetector(v)
+                until not v or not v.Parent.Parent
+            end
+        end
+    end
+    wait(1)
+end
+end)
+
+Section:NewButton("Silent Aimlock", "op box follows the target", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/SilentAimlock/main/Source", true))()
+       game.StarterGui:SetCore("SendNotification", {
+        Title = "Dult.PX";
+        Text = "Sucessfully loaded SilentAimlock...";
+        Duration = "6";
+    })
+    
+    
+end)
 
 Section:NewButton("FakeMacro (K)", "FakeMacro (k) to speed", function()
     -- the key 2 speed is "K"
@@ -317,7 +417,19 @@ function onSelected(mouse)
     mouse.KeyUp:connect(function(k) if k:lower()=="k"then onButton1Up(mouse)end end)
 end
 onSelected(game.Players.LocalPlayer:GetMouse())
-end)                                                                                                                                                
+end)
+Section:NewButton("Dult.PX teleport", "Packable click teleport", function()
+    mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Dult.PX"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)                                                                                                                                             
 
 local Tab = Window:NewTab("ESP")
 
