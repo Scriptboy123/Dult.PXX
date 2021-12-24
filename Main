@@ -223,7 +223,11 @@ Section:NewTextBox("Prediction", "Movement of the player", function(Dult.PX)
 	getgenv().FindMovment = ""
          getgenv().Prediction = true
          getgenv().Player = true
-         getgenv().Ping = false
+         getgenv().Ping = true
+         getgenv().30-70 = "0.156"
+         getgenv().70-120 = "0.167"
+         getgenv().120-170 = "0.179"
+         getgenv().170-300 = "0.198
 end)
 
 
