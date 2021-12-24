@@ -439,7 +439,7 @@ Section:NewLabel("ESP CAN BE LAGGY (Also bugged for now)")
 local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("The credits")
 
-Section:NewLabel("Bling#3497 (I NEVER MADE ESP)")
+Section:NewLabel("Bling#3497 and Jake2Good#2059 for whitelist system (I NEVER MADE ESP)")
 
 else
 print("Not Whitelistedd Contact Owners Co Owner")
