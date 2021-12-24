@@ -209,23 +209,23 @@ local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 
 local Tab = Window:NewTab("Rage Cheats")
 
-local Section = Tab:NewSection("Aimlock")
-Section:NewButton("Aimlock", "Bling is so hot", function()        loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Aimlock/main/Source", true))()             
+local Section = Tab:NewSection("SilentAim")
+Section:NewButton("SilentAim", "Bling is so hot", function()        loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Silentaimm/main/Source ", true))()            
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
-        Text = "Sucessfully loaded Aimlock.";
+        Text = "Sucessfully loaded SilentAim.";
         Duration = "6";
     })
     
     
 end)
-Section:NewKeybind("Aimlock FarRangeKeybind", "Aimlock KeyBind", Enum.KeyCode.Q, function()
-       getgenv().Ifchangekeybind = "Q"
+Section:NewKeybind("SilentAim FarRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Q, function()
+       getgenv().Ifchangekeybind = "E"
    getgenv().Keybind = true
 end)
 
-Section:NewKeybind("Aimlock CloseRangeKeybind", "Aimlock KeyBind", Enum.KeyCode.Z, function()
-       getgenv().Ifchangekeybind = "Z"
+Section:NewKeybind("Aimlock CloseRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Z, function()
+       getgenv().Ifchangekeybind = "E"
    getgenv().Keybind = true
 end)
 Section:NewSlider("Prediction", "Bling is hot wyd eat my grape", 300, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
@@ -239,7 +239,8 @@ end)
 Section:NewButton("AutoPrediction", "Bling2CoolForSchool", function()
      getgenv().AutoPrediction = true
      getgenv().Ping = true
-     getgenv().Aimlock = true
+     getgenv().Aimlock = false
+getgenv().SilentAim = true
 -- Ping<
          --  30-70
                    -- = 0.154
