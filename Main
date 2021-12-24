@@ -238,6 +238,7 @@ end)
 
 Section:NewButton("Smoothness", "Bling2CoolForSchool", function()
      getgenv().Smoothness = true
+       getgenv().Ping = "Smoothness"
 -- Ping<
          --  30-70
                    -- = 0.154
@@ -381,11 +382,6 @@ while shared.MoneyFarm do
     wait(1)
 end
 end)
-Section:NewTextBox("Field Of View", "Change your view", function(Dult.PX)
-      function(value)
-		workspace.CurrentCamera.FieldOfView = (value)	
-end)
-
 
 Section:NewButton("FakeMacro (K)", "FakeMacro (k) to speed", function()
     -- the key 2 speed is "K"
