@@ -210,7 +210,7 @@ local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 local Tab = Window:NewTab("Rage Cheats")
 
 local Section = Tab:NewSection("SilentAim")
-Section:NewButton("SilentAim", "Bling is so hot", function()            loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Sourcee/main/SilentAim", true))()               
+Section:NewButton("SilentAim", "Bling is so hot", function()                      
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
         Text = "Sucessfully loaded SilentAim.";
@@ -416,11 +416,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
-Section:NewTextBox("FOV", "Field of view", function(txt)
-	function(value)
-		workspace.CurrentCamera.FieldOfView = (value)
-end)
-                                                                                                                                    
+                                                                                                                                 
 local Tab = Window:NewTab("ESP")
 
 local Section = Tab:NewSection("ESP")
