@@ -208,6 +208,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 
 local Tab = Window:NewTab("Rage Cheats")
+
 local Section = Tab:NewSection("SilentAim")
 Section:NewButton("SilentAim", "Bling is so hot", function()                      
     game.StarterGui:SetCore("SendNotification", {
