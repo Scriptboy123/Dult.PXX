@@ -416,6 +416,10 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
+Section:NewTextBox("FOV", "Field of view", function(txt)
+	function(value)
+		workspace.CurrentCamera.FieldOfView = (value)
+end)
                                                                                                                                     
 local Tab = Window:NewTab("ESP")
 
