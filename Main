@@ -209,6 +209,20 @@ local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 
 local Tab = Window:NewTab("Rage Cheats")
 
+Section:NewButton("SilentAimlock", "Silentaim with aimlock", function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Okdude/main/LearnBot", true))()
+getgenv().SilentAimlock = "Based on ping"
+getgenv().SilentAim = true
+getgenv().Aimlock = true
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Dult.PX";
+    Text = "Sucessfully Activated SilentAimlock; Q";
+    Duration = "3";
+})
+
+
+end)
+
 local Section = Tab:NewSection("SilentAim")
 Section:NewButton("SilentAim", "Bling is so hot", function()                      
     game.StarterGui:SetCore("SendNotification", {
@@ -252,19 +266,6 @@ Section:NewButton("Smoothness", "Bling2CoolForSchool", function()
  
          -- 250-320   = 0.212
                                 -->
-end)
-Section:NewButton("SilentAimlock", "Silentaim with aimlock", function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Okdude/main/LearnBot", true))()
-getgenv().SilentAimlock = "Based on ping"
-getgenv().SilentAim = true
-getgenv().Aimlock = true
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Dult.PX";
-    Text = "Sucessfully Activated SilentAimlock; Q";
-    Duration = "3";
-})
-
-
 end)
 
 local Section = Tab:NewSection("Settings")
