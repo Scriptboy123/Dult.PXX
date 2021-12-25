@@ -258,6 +258,13 @@ Section:NewButton("SilentAimlock", "Silentaim with aimlock", function()
 getgenv().SilentAimlock = "Based on ping"
 getgenv().SilentAim = true
 getgenv().Aimlock = true
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Dult.PX";
+    Text = "Sucessfully Activated SilentAimlock; Q";
+    Duration = "3";
+})
+
+
 end)
 
 local Section = Tab:NewSection("Settings")
