@@ -231,7 +231,6 @@ end)
 Section:NewTextBox("Prediction", "Prediction of the player", function(txt)
 	getgenv().Dult.PX = true
         getgenv().Ping = true
-        getgenv().Prediction = "Ping"
 end)
 
 
