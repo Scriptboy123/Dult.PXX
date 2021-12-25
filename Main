@@ -416,7 +416,11 @@ pos = CFrame.new(pos.X,pos.Y,pos.Z)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
-end)                                                                                                                                             
+end)
+Section:NewTextBox("FOV", "To change your view side", function(value)
+	function(value)
+		workspace.CurrentCamera.FieldOfView = (value)
+end)                                                                                                                                         
 
 local Tab = Window:NewTab("ESP")
 
