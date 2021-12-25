@@ -210,7 +210,7 @@ local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 local Tab = Window:NewTab("Rage Cheats")
 
 local Section = Tab:NewSection("SilentAim")
-Section:NewButton("SilentAim", "Bling is so hot", function(bling2cool)                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Silentaimm/main/Source ", true))()                    
+Section:NewButton("SilentAim", "Bling is so hot", function()                    
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
         Text = "Sucessfully loaded SilentAim.";
@@ -219,8 +219,19 @@ Section:NewButton("SilentAim", "Bling is so hot", function(bling2cool)          
     
     
 end)
-Section:NewTextBox("Prediction", "Movement of the player", function(Dult.PX)
-getgenv().Prediction = true
+Section:NewKeybind("SilentAim FarRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Q, function()
+       getgenv().Ifchangekeybind = "E"
+   getgenv().Keybind = true
+end)
+
+Section:NewKeybind("SilentAim CloseRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Z, function()
+       getgenv().Ifchangekeybind = "E"
+   getgenv().Keybind = true
+end)
+Section:NewTextBox("Prediction", "Prediction of the player", function(txt)
+	getgenv().Dult.PX = true
+        getgenv().0-150 = "0.147-0.178"
+        getgenv().150-300 = "0.198-0.237"
 end)
 
 
@@ -331,8 +342,6 @@ for i, v in pairs(workspace:GetDescendants()) do
     end
 end
 
-print("Auto farm")
-
 shared.MoneyFarm = true -- Just execute shared.MoneyFarm = false to stop farming
 
 while shared.MoneyFarm do
@@ -421,34 +430,15 @@ local Section = Tab:NewSection("ESP")
     end
 end)
 local Section = Tab:NewSection("WARNING")
+
 Section:NewLabel("ESP CAN BE LAGGY (Also bugged for now)")
-
-local Tab = Window:NewTab("Animation Changer")
-local Section = Tab:NewSection("Animation Changer")
-
-Section:NewButton("Zombie Werewolf and mage", "changes your jumps", function()
-    while true do
-local Animate = game.Players.LocalPlayer.Character.Animate
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
-game.Players.LocalPlayer.Character.Humanoid.Jump = false
-wait(1)
-end
-end)
-Section:NewLabel("MORE COMING SOON!!!!!!!!")
-
 
 local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("The credits")
 
-Section:NewLabel("Bling#3497 and Jake2Good#2059 for whitelist system (I NEVER MADE ESP)")
+Section:NewLabel("Bling#3497 (I NEVER MADE ESP)")
 
 else
-print("Not Whitelistedd Contact Owners Co Owner")
+print("Not whitelisted.")
 end
 end
