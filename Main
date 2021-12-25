@@ -199,8 +199,8 @@ test = sha256(ip.."camgozsense"); --ip'yi sha256'ya Ã§eviriyor
 for i,v in pairs(authtest) do -- eÄŸer auth varsa
     if v == test then -- eÄŸer kayÄ±tlÄ± ise
          game.StarterGui:SetCore("SendNotification", {
-    Title = "Whitelisted";
-    Text = "Loading Script...";
+    Title = "Dult.PX";
+    Text = " You're Sucessfully Whitelisted, Loading Script...";
 
 }) --printledi
 wait(5.3)
@@ -208,8 +208,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 
 local Tab = Window:NewTab("Rage Cheats")
-
 local Section = Tab:NewSection("SilentAim")
+
 Section:NewButton("SilentAim", "Bling is so hot", function()                      
     game.StarterGui:SetCore("SendNotification", {
         Title = "Dult.PX";
