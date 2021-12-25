@@ -208,7 +208,16 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
 
 local Tab = Window:NewTab("Rage Cheats")
-
+local Section = Tab:NewSection("SilentAim")
+Section:NewButton("SilentAim", "Bling is so hot", function()                      
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Dult.PX";
+        Text = "Sucessfully loaded SilentAim.";
+        Duration = "6";
+    })
+    
+    
+end)
 Section:NewButton("SilentAimlock", "Silentaim with aimlock", function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Okdude/main/LearnBot", true))()
 getgenv().SilentAimlock = "Based on ping"
@@ -221,17 +230,6 @@ game.StarterGui:SetCore("SendNotification", {
 })
 
 
-end)
-
-local Section = Tab:NewSection("SilentAim")
-Section:NewButton("SilentAim", "Bling is so hot", function()                      
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Dult.PX";
-        Text = "Sucessfully loaded SilentAim.";
-        Duration = "6";
-    })
-    
-    
 end)
 Section:NewKeybind("SilentAim FarRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Q, function()
        getgenv().Ifchangekeybind = "E"
