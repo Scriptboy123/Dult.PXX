@@ -253,6 +253,12 @@ Section:NewButton("Smoothness", "Bling2CoolForSchool", function()
          -- 250-320   = 0.212
                                 -->
 end)
+Section:NewButton("SilentAimlock", "Silentaim with aimlock", function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Okdude/main/LearnBot", true))()
+getgenv().SilentAimlock = "Based on ping"
+getgenv().SilentAim = true
+getgenv().Aimlock = true
+end)
 
 local Section = Tab:NewSection("Settings")
 
