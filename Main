@@ -221,9 +221,6 @@ Section:NewButton("SilentAim", "Bling is so hot", function()
 end)
 Section:NewButton("SilentAimlock", "Silentaim with aimlock", function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/Okdude/main/LearnBot", true))()
-getgenv().SilentAimlock = "Based on ping"
-getgenv().SilentAim = true
-getgenv().Aimlock = true
 game.StarterGui:SetCore("SendNotification", {
     Title = "Dult.PX";
     Text = "Sucessfully Activated SilentAimlock; Q";
