@@ -230,8 +230,7 @@ Section:NewKeybind("SilentAim CloseRangeKeybind", "SilentAim KeyBind", Enum.KeyC
 end)
 Section:NewTextBox("Prediction", "Prediction of the player", function(txt)
 	getgenv().Dult.PX = true
-        getgenv().0-150 = "0.147-0.178"
-        getgenv().150-300 = "0.198-0.237"
+        getgenv().Ping = true
 end)
 
 
