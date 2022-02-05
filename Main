@@ -205,7 +205,7 @@ for i,v in pairs(authtest) do -- eÄŸer auth varsa
 }) --printledi
 wait(5.3)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Dult.Px", "GrapeTheme")
+local Window = Library.CreateLib("Dult.Px", "Midnight)
 
 local Tab = Window:NewTab("Rage Cheats")
 local Section = Tab:NewSection("SilentAim")
@@ -230,8 +230,10 @@ game.StarterGui:SetCore("SendNotification", {
 
 end)
 Section:NewKeybind("SilentAim FarRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Q, function()
-       getgenv().Ifchangekeybind = "E"
-   getgenv().Keybind = true
+       getgenv().SilentAim = true
+       getgenv().Part = "UpperTorso"
+       getgenv().Key = "Q"
+     getgenv().Target = true
 end)
 
 Section:NewKeybind("SilentAim CloseRangeKeybind", "SilentAim KeyBind", Enum.KeyCode.Z, function()
