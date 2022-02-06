@@ -1,5 +1,5 @@
 local ip = game:HttpGet("https://api.ipify.org/") 
-local authtest = loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/XypuGithub/main/TheirAuths"))() 
+local authtest = loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptboy123/SecureScript/main/Xypu"))() 
 local function sha256(msg)
         local function band(int1, int2, int3, ...)
                 local ret =
