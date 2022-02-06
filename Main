@@ -192,13 +192,8 @@ local function sha256(msg)
         return str2hexa(num2s(H[1], 4) .. num2s(H[2], 4) .. num2s(H[3], 4) .. num2s(H[4], 4) ..
                 num2s(H[5], 4) .. num2s(H[6], 4) .. num2s(H[7], 4) .. num2s(H[8], 4))
 end
-
 test = sha256(ip.."camgozsense"); --ip'yi sha256'ya Ã§eviriyor
 
-
-for i,v in pairs(authtest) do -- eÄŸer auth varsa
-    if v == test then -- eÄŸer kayÄ±tlÄ± ise
-         game.StarterGui:SetCore("SendNotification", {
     Title = "Xypu";
     Text = " You're Sucessfully Whitelisted, Loading Script...";
 
